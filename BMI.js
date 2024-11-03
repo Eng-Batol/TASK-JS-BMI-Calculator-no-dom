@@ -1,3 +1,5 @@
+const { el } = require("@faker-js/faker");
+
 /**
  * Calculate BMI
  * - takes a weight in KG
@@ -7,12 +9,14 @@
 function calculateBMI(weight, height) {
   /**
    *  Write your code here 👇🏼
+   * The equation for BMI is (weight (kg) / height^2(m)).
    */
-  const BMI = 0;
-
+  // let BMI = 0;
+  let  heightInMeter = height / 100;
   /**
    * Stop making changes here!
    */
+  const BMI = (weight/heightInMeter**2)
   return BMI;
 }
 
@@ -26,11 +30,22 @@ function getBMIState(BMI) {
    *  Write your code here 👇🏼
    */
   let BMIState;
-
+  
   /**
    * Stop making changes here!
    */
-  return BMIState;
+   if (BMI <18.5) {
+    BMIState = "underweight";
+
+   }else if (BMI <= 24.9){
+    BMIState="healthy";
+   } else if ( BMI <= 29.9 ){
+    BMIState = "overweight";
+   } else {
+    BMIState = "obese";
+   }
+
+  return BMIState;// becouse i want he if statmnt to rerturn the value of the 
 }
 
 /**
