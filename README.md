@@ -1,4 +1,4 @@
-h
+ h
 # JS-BMI
 
 ## Instructions
